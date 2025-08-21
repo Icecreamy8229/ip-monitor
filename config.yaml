@@ -1,0 +1,51 @@
+TEST_MODE: True # false will trigger ez outlet resets when a URL is configured, otherwise, any value here otherwise will not send the reset command, and can be used to test.
+INTERVAL: 20 #IN SECONDS
+LOGGING_ENABLED: False
+AUTO_UPDATE: True
+
+
+WEBHOOK:
+  URL: ""
+  MAX_ATTEMPTS: 5
+  TIMEOUT: 5 #IN SECONDS
+
+API: #if you have a custom api you want to send to.
+  URL: ""
+  KEY: "" #an api key allowing you to make the post.
+  MAX_ATTEMPTS: 5
+  TIMEOUT: 3
+  HEADER_FROM_PREFIX: ""
+
+STATICS: # AN IP ADDRESS GOES IN PRIMARY, AND A LIST OF SECONDARY IP ADDRESSES GOES UNDER SECONDARIES
+  PRIMARY: "" #IF NO PRIMARY CONFIGURED, THE SCRIPT WILL JUST NOTIFY OF ADDRESS CHANGES.
+  PRIMARY_GATEWAY: ""
+  SECONDARIES:
+    - "" 
+  DESCRIPTIONS:
+    - "My description here."
+
+LOCATION:
+  NAME: "" #A friendly name of the location the WAN address is being monitored for.
+
+EZ_OUTLET: #if you have an EZ outlet.
+  URL: ""
+  MAX_RESET_ATTEMPTS: 1
+  LIMIT: 15 #IN MINUTES
+  USERNAME: ""
+  PASSWORD: ""
+
+DNS_PROVIDERS: #LIST URLS HERE THAT RETURN YOUR IP ADDRESS IN EITHER TEXT OR JSON FORMAT.
+  - 'http://httpbin.org/ip'
+  - "http://wtfismyip.com/text"
+  - "https://api.ipify.org/"
+  - "https://myexternalip.com/raw"
+  - "https://ipapi.co/ip/"
+  - "https://ifconfig.me/ip"
+  - "http://myip.dnsomatic.com/"
+  - "http://wtfismyip.com/text"
+  - "https://checkip.amazonaws.com"
+  - "https://icanhazip.com"
+  - "https://ifconfig.co/ip"
+  - "https://ipecho.net/plain"
+  - "https://ipinfo.io/ip"
+  - "https://untimely.xyz/myip"
