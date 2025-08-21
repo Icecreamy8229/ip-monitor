@@ -2,3 +2,6 @@ __pycache__/
 *.env
 testruns/
 .idea/
+releases/
+*.zip
+testing/
